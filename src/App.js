@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { observer } from 'mobx-react';
-import './App.css';
+import './App.scss';
 import Artysci from './artysci/Artysci';
 import Koncerty from './koncerty/Koncerty';
 import Logowanie from './logowanie/Logowanie';
@@ -63,7 +63,7 @@ class App extends Component {
               <Route path="/koncerty" component={Koncerty} />
               <Route path="/artysci" component={Artysci} />
               <Route path="/logowanie" component={Logowanie} />
-              <Route path="/rejestracja" component={Rejestracja} />
+              {/* <Route path="/rejestracja" component={Rejestracja} /> */}
               <Route path="/nowypost" component={NowyPost} />
               <Route path="/profil" component={Profil} />
             </Switch>

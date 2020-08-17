@@ -4,7 +4,9 @@ class Footer extends Component {
     render() {
         return (
             <div>
-                <h1>sasas</h1>
+                <footer>
+                    MusicTome© All Rights Reserved <br /> biuro@musictome.pl
+                </footer>
             </div>
         )
     }

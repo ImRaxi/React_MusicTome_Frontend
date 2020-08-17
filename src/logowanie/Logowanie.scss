@@ -1,0 +1,52 @@
+
+.l-container {
+    margin-top: 100px;
+}
+
+.l-logowanie, .l-rejestracja {
+    background-color: rgb(235, 235, 235);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 50px;
+    border: 20px solid white;
+    position: relative;
+}
+
+input {
+    width: 250px;
+    padding: 3px 15px;
+    border: 1px solid rgb(180, 180, 180);
+    border-radius: 5px;
+}
+
+.submit {
+    width: 250px;
+    padding: 3px 15px;
+    border: 1px solid rgb(180, 180, 180);
+    border-radius: 5px;
+    margin-top: 15px;
+    background-color: rgb(255, 217, 0);
+}
+
+label {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.l-container {
+    min-height: calc(100vh - 270px);
+}
+
+.submit:hover {
+    background-color: #262827;
+    transition: 0.22s all linear;
+    color: rgb(255, 217, 0);
+}
+
+.title {
+    position: absolute;
+    top: 20px;
+    left: 50;
+    font-size: 1.4em;
+}

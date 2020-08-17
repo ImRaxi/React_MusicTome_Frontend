@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import UserStore from '../logowanie/stores/UserStore';
 import { Redirect } from 'react-router-dom';
+import './Rejestracja.scss';
 
 class Rejestracja extends Component {
 
@@ -16,7 +17,7 @@ class Rejestracja extends Component {
 
     setInputValue(prop, val) {
         val = val.trim();
-        if(prop != 'email' && val.length > 12) {
+        if(prop !== 'email' && val.length > 12) {
             return;
         }
         this.setState({
@@ -86,39 +87,59 @@ class Rejestracja extends Component {
         if(!UserStore.isLoggedIn) {
             return (
                 <div>
+                    <div className="xxxx">
+                    <label>Email</label><br />
                     <input 
                         type="email" 
                         name="email" 
                         placeholder="Email" 
+                        className="email"
                         value = { this.state.email ? this.state.email : '' }
                         onChange = {(e) => this.setInputValue('email', e.target.value)}
                     />
+                    </div>
+
+                    <div className="xxxx">
+                    <label>Nazwa użytkownika</label><br />
                     <input 
                         type="username" 
                         name="username" 
                         placeholder="Username" 
+                        className="login"
                         value = { this.state.username ? this.state.username : '' }
                         onChange = {(e) => this.setInputValue('username', e.target.value)}
                     />
+                    </div>
+
+                    <div className="xxxx">
+                    <label>Hasło</label><br />
                     <input 
                         type="password" 
                         name="password" 
                         placeholder="Password" 
+                        className="password"
                         value = { this.state.password ? this.state.password : '' }
                         onChange = {(e) => this.setInputValue('password', e.target.value)}
                     />
+                    </div>
+
+                    <div className="xxxx">
+                    <label>Powtórz hasło</label><br />
                     <input 
-                        type="password_confirmation" 
+                        type="password" 
                         name="password_confirmation" 
                         placeholder="Password confirmation" 
+                        className="password-again"
                         value = { this.state.password_confirmation ? this.state.password_confirmation : '' }
                         onChange = {(e) => this.setInputValue('password_confirmation', e.target.value)}
                     />
+                    </div>
 
                     <button 
                         type="submit"
                         value = "register"
                         onClick = {() => this.doRegister()}
+                        className="submit"
                     >Zarejestruj</button>
                 </div>
             )

@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import LoginForm from './LoginForm';
 import UserStore from './stores/UserStore';
 import { observer } from 'mobx-react';
+import Rejestracja from '../rejestracja/Rejestracja';
+import './Logowanie.scss'; 
 
 class Logowanie extends Component {
 
@@ -25,8 +27,18 @@ class Logowanie extends Component {
 
         return (
             <div>
-                <h1>Witam</h1>
-                <LoginForm />
+                <div className="container l-container">
+                    <div className="row">
+                        <div className="col-sm-6 l-logowanie">
+                            <div className="title">Logowanie</div>
+                            <LoginForm />
+                        </div>
+                        <div className="col-sm-6 l-rejestracja">
+                            <div className="title">Rejestracja</div>
+                            <Rejestracja />
+                        </div>
+                    </div>
+                </div>
             </div>
         )
     }

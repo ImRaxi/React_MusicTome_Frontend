@@ -1,0 +1,362 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Jost', sans-serif;
+}
+
+a, a:hover, a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+//SEGREGACJA
+
+/* navigacja */
+
+nav {
+    height: 70px;
+    background-color: #262827;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-menu-list ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    margin-bottom: 0px;
+    z-index: 100;
+}
+
+.nav-menu-list ul li {
+    margin: 0px 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.nav-menu-list ul li:hover {
+    color: rgb(255, 217, 0);
+    transition: 0.2s all linear;
+}
+
+.logo-nav-mobile {
+    font-size: 1.4em;
+    color: #fff;
+    cursor: pointer;
+}
+
+.logo-nav-mobile:hover {
+    color: rgb(255, 217, 0);
+    transition: 0.2s all linear;
+}
+
+.nav-btn-toggle {
+    color: #fff;
+    font-size: 1.4em;
+    display: none;
+    cursor: pointer;
+}
+
+.nav-btn-toggle:hover {
+    color: rgb(255, 217, 0);
+    transition: 0.2s all linear;
+}
+
+.super-logo {
+    margin-left: 10px;
+}
+
+header {
+    height: 50vh;
+    background-image: url('img/background-image.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.header-mask {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 50;
+}
+
+.header-search {
+    z-index: 55;
+    text-align: center;
+}
+
+.motto {
+    font-size: 4em;
+    color: #fff;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bolder;
+}
+
+.search {
+    width: 350px;
+    border-radius: 5px;
+    border: none;
+    height: 40px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.search-btn {
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    padding: 0px 20px;
+    background-color: #262827;
+    color: white;
+    /* text-transform: uppercase; */
+}
+
+.search-btn:hover {
+    background-color: rgb(53, 52, 50);
+    transition: 0.2s all linear;
+    /* color: #262827; */
+}
+
+.search-bar-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.news-container {
+    height: 75px;
+    width: 100%;
+    margin-top: -37.5px;
+    position: relative;
+    z-index: 55;
+}
+
+.news {
+    height: 100%;
+    width: 300px;
+    background-color: #262827;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2em;
+}
+
+/* nowosci */
+
+.info-container {
+    padding: 50px 0px;
+    /* border-bottom: 1px solid rgba(0,0,0, 0.2); */
+}
+
+.desc-info .info h2 {
+    font-size: 1.5em;
+}
+
+.info-video {
+    max-width: 500px;
+    width: 90%;
+    height: 250px;
+}
+
+
+.news-community span {
+    /* height: 40px; */
+    /* background-color: red; */
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    cursor: pointer;
+    margin: 5px 0px;
+}
+
+.news-community i {
+    font-size: 1.7em;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+/* album  */
+
+.album-info {
+    background-color: rgb(241, 241, 241);
+}
+
+.album-info .info h2 {
+    font-size: 1.5em;
+}
+
+.album-community {
+    display: flex;
+}
+
+.album-community span {
+    /* height: 40px; */
+    /* background-color: red; */
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    cursor: pointer;
+    margin: 5px 0px;
+}
+
+.album-community i {
+    font-size: 1.7em;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.album-img {
+    max-height: 300px;
+}
+
+.album-img-center {
+    text-align: center;
+}
+
+.album-community span i:hover {
+    color: rgb(255, 217, 0);
+    transition: 0.2s all linear;
+}
+
+/* footer */
+
+footer {
+    height: 200px;
+    background-color: #262827;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+
+    /* navigacja */
+    .nav-menu-list ul {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background-color: #262827;
+        flex-direction: column;
+        width: 100%;
+        display: none;
+    }
+
+    .nav-menu-list ul li {
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-btn-toggle {
+       display: block; 
+    }
+
+    .motto {
+        font-size: 2em;
+        width: 100%;
+    }
+
+    .search {
+        width: 200px;
+    }
+
+    .news {
+        width: 200px;
+        height: 50px;
+        font-size: 1.5em;
+    }
+
+    .news-container { 
+        margin-top: -25px;
+    }
+
+    /* news */
+    .info-video {
+        width: 100%;
+    }
+
+    .info {
+        margin-top: 20px;
+        text-align: justify;
+    }
+
+    /* albumy */
+
+}
+
+
+/* caroulse */
+
+.owl-carousel div {
+    text-align: center;
+}
+
+.album-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.premiera-album-img {
+    width: 350px;
+    height: 350px;
+}
+
+.premiera-album-img img {
+ max-width: 100%;
+}
+
+.premiery {
+    margin-top: 50px;
+    min-height: calc(100vh - 270px);
+}
+
+.premiera-album-title {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.premiera-album-data {
+    font-size: 1.3em;
+}
+
+.premiera-month {
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.premiera-month i {
+    margin-right: 10px;
+}
+
+.owl-prev span, .owl-next span {
+    font-size: 40px;
+}

@@ -76,21 +76,32 @@ class Logowanie extends Component {
     render() {
         return (
             <div className = "loginForm">
+                <div className="xxxx">
+                <label>Nazwa użytkownika</label><br />
                 <input 
                     type="text" 
                     name="username" 
+                    className = "login"
                     placeholder="Nazwa użytkownika" 
                     value={this.state.username ? this.state.username : ''}
                     onChange = {(val) => this.setInputValue('username', val.target.value)}
                 />
+                </div>
+
+                <div className="xxxx">
+                <label>Hasło</label><br />
                 <input 
                     type="password" 
                     name="password" 
                     placeholder="Hasło"
+                    className="password"
                     value = {this.state.password ? this.state.password : ''}
                     onChange = {(val) => this.setInputValue('password', val.target.value)}
                 />
+                </div>
+
                 <button 
+                    className="submit"
                     type ="submit" 
                     value="zaloguj"
                     disabled = {this.state.buttonDisabled} 
